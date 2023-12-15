@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* #1B8ECC */
+/* #DFE6EE */
+/* #646262 */
+/* #E2AF31 */
+
+/* CSS HEX */
+/* --celestial-blue: #1992D4ff;
+--dim-gray: #747474ff;
+--xanthous: #F0B429ff;
+--alice-blue: #E2E8F0ff;
+--white: #FFFFFFff; */
+
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  --celestial-blue: #1992d4ff;
+  --dim-gray: #747474ff;
+  --xanthous: #f0b429ff;
+  --alice-blue: #e2e8f0ff;
+  --white: #ffffffff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  /* gap: 10px; */
+  background: #dfe6ee;
+}
+
+.sidebar {
+  background: var(--celestial-blue);
+  color: white;
+  grid-column: 1;
+  grid-row: 1/ 3;
+  display: grid;
+}
+
+.sidebar-title {
+  display: flex;
+  padding: 0.5em;
+  align-items: center;
+  max-height: 200px;
+}
+.sidebar-title h2 {
+  font-size: 2.2rem;
+  margin-left: 0.3em;
+}
+.sidebar-list {
+  display: grid;
+  padding: 1.5em;
+  list-style-type: none;
+}
+.sidebar-list li {
+  display: flex;
+  font-size: 1.4rem;
+  margin: 0.5em 0;
+  align-items: center;
+}
+.sidebar-name {
+  margin-left: 0.7em;
+}
+.dashboard-icon {
+  width: 40px;
+}
+
+.icon {
+  width: 20px;
+}
+
+.header {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  padding: 0.5em 0.4em;
+  /* grid-template-columns: 1fr 400px; */
+  /* grid-template-rows: 100px 100px; */
+  gap: 15px;
+  background: white;
+  box-shadow: 30px 12px 20px rgb(220, 220, 220);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1/ 2;
+}
+.search img {
+  width: 30px;
+}
+.search input {
+  margin-left: 0.5em;
+  border-radius: 10px;
+  padding: 0.4em 1em;
+  border: none;
+  width: 70%;
+  background-color: #dfe6ee;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 2 / 3;
+}
+
+.details img {
+  margin-left: 0.9em;
+}
+.details p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-left: 0.9em;
+}
+.smaller {
+  width: 10px;
+}
+
+.profile-details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.5em;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  width: 70px;
+  grid-row: 1/3;
+  grid-column: 1;
+}
+
+.user-info {
+  grid-column: 2 / 3;
+  grid-row: 1/3;
+  margin-left: 0.9em;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.btn {
+  border-radius: 15px;
+  padding: 0.3em 0.5em;
+  border: none;
+  color: white;
+  background: var(--celestial-blue);
+  font-weight: bold;
+  margin: 0.5em;
+  width: 100px;
+  height: 40px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 350px;
+  /* grid-template-rows: 20px repeat(4, 200px); */
+
+  padding: 1.5em;
+}
+.main-content-title,
+.announcements-title {
+  font-size: 1.5rem;
+  margin: 0.7em 0;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.announcements-title {
+  grid-column: 3;
+  margin-left: 0.5em;
+}
+.cards-container {
+  grid-column: 1/3;
+  display: grid;
+  gap: 25px;
+
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.card {
+  border-left: 5px var(--xanthous) solid;
+  padding: 2em;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 3px 12px 5px white;
+}
+.card p {
+  color: var(--dim-gray);
+}
+.icon-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.icon-container img {
+  margin: 0 0.5em;
+}
+
+.announcements {
+  grid-column: 3;
+  grid-row: 1;
+  display: grid;
+}
+
+.announcements-container {
+  border-radius: 10px;
+  background-color: white;
+  margin-left: 1em;
+  grid-column: 3;
+
+  /* grid-row: 2; */
+  /* grid-column: 1; */
+}
+.announcements-title {
+  grid-column: 3;
+  grid-row: 1;
+}
+.announcements-card {
+  margin-top: 0;
+  padding: 1em 2em;
+}
+.announcements-card h3 {
+  font-size: 1.2rem;
+}
+.announcements-card p {
+  font-size: 1rem;
+  margin: 0.5em 0;
+  color: gray;
+}
+.announcements-hr {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid rgb(187, 185, 185);
+}
+
+.trending {
+  display: grid;
+  grid-column: 3;
+  grid-row: 4;
+  margin-left: 1em;
+}
+
+.trending h3 {
+  margin: 0.5em;
+}
+
+.trending-card-container {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding: 0.5em;
+  gap: 10px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.trending-image-container {
+  grid-row: 1 /3;
+  justify-self: center;
+}
+.trending-card {
+  display: grid;
+  padding: 1em;
+  grid-template-columns: auto 1fr;
+}
+.trending-details {
+  grid-row: 1/3;
+  margin-left: 0.5em;
+  font-size: 1.1rem;
+}
+.trending-title {
+  margin-bottom: 0.5em;
+  margin-left: 0.3em;
+}
+.card-image {
+  width: 50px;
+  border-radius: 50%;
+  background-position: center;
+}
+
+/* todo 
+make sure .announcements is at the top of the list find out why text removes its 
+make sure it is in the top row
+find out why 3 cards displays an empty card at the bottom 
+
+add tasks at the trending 
+fix eye icon 
+fix sidebar padding on the left */
